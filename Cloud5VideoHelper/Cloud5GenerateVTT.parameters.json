@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "logicAppName": {
+      "value": "Cloud5GenerateVTT"
+    },
+    "videoindexer_1_api_key": {
+      "value": "96e94ed5129741b98df354042c103cc2"
+    }
+  }
+}

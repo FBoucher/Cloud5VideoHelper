@@ -25,12 +25,16 @@
   <Import Condition=" Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets') " Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Deployment\1.1\DeploymentProject.targets" />
   <!-- vertag<:>end -->
   <ItemGroup>
+    <None Include="Cloud5GenerateVTTbd.json" />
+    <None Include="Cloud5TranslateFrToEnDB.json" />
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
+    <Content Include="Cloud5TranslateFrToEn.json" />
     <Content Include="Deploy-AzureResourceGroup.ps1" />
-    <Content Include="LogicApp.json" />
-    <Content Include="LogicApp.parameters.json" />
+    <Content Include="Cloud5GenerateVTT.json" />
+    <Content Include="Cloud5GenerateVTT.parameters.json" />
+    <Content Include="Cloud5TranslateFrToEn.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
