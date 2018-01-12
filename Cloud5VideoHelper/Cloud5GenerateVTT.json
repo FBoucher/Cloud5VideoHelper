@@ -181,7 +181,7 @@
                 ]
               }
             },
-            "Create_file": {
+            "Save_the_VTT_File": {
               "type": "ApiConnection",
               "inputs": {
                 "host": {
@@ -247,23 +247,23 @@
         "parameters": {
           "$connections": {
             "value": {
-              "onedrive": {
-                "id": "[concat(subscription().id, '/providers/Microsoft.Web/locations/', parameters('logicAppLocation'), '/managedApis/', 'onedrive')]",
-                "connectionId": "[resourceId('Microsoft.Web/connections', parameters('onedrive_1_Connection_Name'))]",
-                "connectionName": "[parameters('onedrive_1_Connection_Name')]"
-              },
               "videoindexer": {
                 "id": "[concat(subscription().id, '/providers/Microsoft.Web/locations/', parameters('logicAppLocation'), '/managedApis/', 'videoindexer')]",
                 "connectionId": "[resourceId('Microsoft.Web/connections', parameters('videoindexer_1_Connection_Name'))]",
                 "connectionName": "[parameters('videoindexer_1_Connection_Name')]"
+              },
+              "onedrive": {
+                "id": "[concat(subscription().id, '/providers/Microsoft.Web/locations/', parameters('logicAppLocation'), '/managedApis/', 'onedrive')]",
+                "connectionId": "[resourceId('Microsoft.Web/connections', parameters('onedrive_1_Connection_Name'))]",
+                "connectionName": "[parameters('onedrive_1_Connection_Name')]"
               }
             }
           }
         }
       },
       "dependsOn": [
-        "[resourceId('Microsoft.Web/connections', parameters('onedrive_1_Connection_Name'))]",
-        "[resourceId('Microsoft.Web/connections', parameters('videoindexer_1_Connection_Name'))]"
+        "[resourceId('Microsoft.Web/connections', parameters('videoindexer_1_Connection_Name'))]",
+        "[resourceId('Microsoft.Web/connections', parameters('onedrive_1_Connection_Name'))]"
       ]
     },
     {
